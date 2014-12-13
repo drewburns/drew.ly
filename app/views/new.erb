@@ -1,0 +1,6 @@
+<% if @url == ""%>
+<h4><%= "Your url is invalid" %></h4>
+<% else %>
+<h4><%= "Your link is: http://localhost:9393/" + @url.shortened_url %></h4>
+<% end %>
+
