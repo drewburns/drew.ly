@@ -35,6 +35,7 @@ get '/stats/:url' do
 			@referers_array << URI(click.referer).host.capitalize
 		end
 	end
+	@referers_array = @referers_array.uniq
 
 
 

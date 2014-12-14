@@ -1,14 +1,21 @@
-<h3>This link has been clicked <%= @clicks.size %> times</h3>
-<h4>The peak times are:</h4>
-<ul>
-	<% @times_array.each { |hour| %>
-		<li><p><%= hour %> O'Clock</p></li>
-	<% } %>
-</ul>
+<div id = 'header'>
+	<a href = "/"><h1>Drewly</h1></a>
+	<h3>Short Links Large Stats</h3>
+</div>
 
-<h4>The link has been accessed from:</h4>
-<ul>
-	<% @referers_array.each { |site| %>
-		<li><p><%= site %></p></li>
-	<% } %>
-</ul>
+<div id = "body">
+	<h3 id = "click_count">This link has been clicked <%= @clicks.size %> times</h3>
+	<h4 id = "subtitle">The peak times are:</h4>
+	<ul>
+		<% @times_array.each { |hour| %>
+			<li><p><%= hour %> O'Clock</p></li>
+		<% } %>
+	</ul>
+
+	<h4 id = "subtitle">The link has been accessed from:</h4>
+	<ul>
+		<% @referers_array.each { |site| %>
+			<li><p><%= site %></p></li>
+		<% } %>
+	</ul>
+</div>

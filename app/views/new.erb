@@ -1,6 +1,12 @@
-<% if @url == ""%>
-<h4><%= "Your url is invalid" %></h4>
-<% else %>
-<h4><%= "Your link is: http://localhost:9393/" + @url.shortened_url %></h4>
-<% end %>
+<div id = 'header'>
+	<a href = "/"><h1>Drewly</h1></a>
+	<h3>Short Links Large Stats</h3>
+</div>
 
+<div id = "body">
+	<% if @url == ""%>
+	<h4 id = "valid_or_not"><%= "Your url is invalid" %></h4>
+	<% else %>
+	<h4 id = "valid_or_not"><%= "Your link is: http://localhost:9393/" + @url.shortened_url %></h4>
+	<% end %>
+</div>

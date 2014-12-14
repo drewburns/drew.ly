@@ -1,3 +1,70 @@
-html {
-	
+ul {
+	list-style-type: none;
+	margin-left: 27%;
 }
+a:visited {
+	color:black;
+}
+a {
+	color:black;
+}
+
+#header {
+	height: 5em;
+	background-color: red;
+
+}
+
+#header h1 {
+	font-size: 35px;
+	margin-left: 50px;
+	float: left;
+}
+#header h3{
+	margin-top: 2em;
+	margin-left: 20px;
+	float:left;
+}
+
+form {
+	margin-left: 35%;
+}
+
+form h3 {
+	margin-left: -35px;
+	font-size: 30px;
+}
+
+#textbox {
+	width:400px;
+}
+
+#submit {
+	display: block;
+	margin-top: 15px;
+	width:200px;
+	margin-left: 100px;
+	height: 35px;
+}
+
+#submit:hover {
+	background-color: #00FF00;
+}
+
+#valid_or_not {
+	font-size: 35px;
+	margin-left: 35%;
+}
+
+
+#subtitle {
+	margin-top: 100px;
+	margin-left: 30%;
+}
+#click_count {
+	margin-left: 30%;
+	font-size: 35px;
+}
+
+
+
