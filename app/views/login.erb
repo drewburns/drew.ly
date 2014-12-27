@@ -1,0 +1,21 @@
+<div id = 'header'>
+	<a href = "/"><h1>Drewly</h1></a>
+	<h3>Short Links Large Stats</h3>
+</div>
+
+<div id = "body">
+	<%= @login_error %>
+	<form id = "url_form" action="/login" method="post">
+		<h3>Enter your username to login:</h3>
+	  	<input id = "textbox" type="text" name="username_input">
+	  	<input id = "submit" type = "submit" name = "submit_button">
+	</form>
+
+	<form id = "url_form" action="/newaccount" method="post">
+		<%= @error %>
+		<h3>Enter your username to make a new account:</h3>
+	  	<input id = "textbox" type="text" name="username_input">
+	  	<input id = "submit" type = "submit" name = "submit_button">
+	</form>
+</div>
+

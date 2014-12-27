@@ -1,6 +1,7 @@
 class CreateUrls < ActiveRecord::Migration
   def change
   	create_table :urls do |t|
+  		t.integer :user_id
     	t.string :original_url
     	t.string :shortened_url
     	

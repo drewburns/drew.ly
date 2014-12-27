@@ -1,0 +1,11 @@
+<div id = 'header'>
+	<a href = "/"><h1>Drewly</h1></a>
+	<h3>Short Links Large Stats</h3>
+	<div id = "log_or_links"> <a  href="/logout"> Log Out</a> </div>
+</div>
+
+<h1><%= @user.username %>'s links</h1>
+<% @user.urls.each {|url|%>
+	<h4> http://drewly.herokuapp.com/<%=url.shortened_url %> ---- Links to <%= url.original_url%> </h4>
+	<a href= <%="/stats/" +  url.shortened_url %> > Stats for this link</a>
+<% } %>

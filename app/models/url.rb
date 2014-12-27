@@ -3,6 +3,7 @@ class Url < ActiveRecord::Base
   validates :original_url, format: { with: /https?:\/\/\w+.\w{3}/,}
   validates	:shortened_url , uniqueness: true
   has_many :clicks
+  belongs_to :user
 
 
 

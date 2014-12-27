@@ -1,6 +1,8 @@
 
 require 'uri'
 get '/' do
+	@current_user = current_user
+	@stuff = logged_in?
   # Look in app/views/index.erb
   erb :index
 end
@@ -8,8 +10,8 @@ end
 post '/new' do
 	@url = ""
 	entered_url = params[:url]
-	if Url.create(original_url: entered_url, shortened_url: Url.random_string ).valid?
-		@url = Url.create(original_url: entered_url, shortened_url: Url.random_string )
+	if Url.new(original_url: entered_url, shortened_url: Url.random_string , user_id: session[:user_id] ).valid?
+		@url = Url.create(original_url: entered_url, shortened_url: Url.random_string ,user_id: session[:user_id] )
 	end
 	erb :new
 end
@@ -53,3 +55,6 @@ get '/:url' do
 
 	redirect @url.original_url
 end
+
+
+

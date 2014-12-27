@@ -1,6 +1,11 @@
 <div id = 'header'>
 	<a href = "/"><h1>Drewly</h1></a>
 	<h3>Short Links Large Stats</h3>
+	<% if @stuff == false %>
+		<div id = "log_or_links"> <a  href="/login">Log In</a> </div>
+	<% else %>
+		<div id = "log_or_links"> <a href= <%= "/user/#{@current_user.id.to_s}" %> >My links</a> </div>
+	<% end %>
 </div>
 
 <div id = "body">
